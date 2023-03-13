@@ -3,14 +3,13 @@ import { InputField } from '../InputField';
 import { SelectField } from '../SelectField';
 import { IFormFields, IFormModal } from '../FormBuilder/interfaces'
 
-interface IFormFieldProps {
+interface IFormElementProps {
   field:IFormFields;
   handleFormData: (input: any) => void;
   values: IFormModal;
 }
 
-export const FormElement = ({field, handleFormData, values}: IFormFieldProps) => {
-  console.log(field)
+export const FormElement = ({field, handleFormData, values}: IFormElementProps) => {
   let Element = InputField;
 
   // Must add a different logic to be more robust

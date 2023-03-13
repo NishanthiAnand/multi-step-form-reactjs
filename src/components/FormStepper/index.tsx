@@ -9,8 +9,10 @@ import { Form } from '../Form';
 import { IFormModal, IForm } from '../FormBuilder/interfaces';
 import styled from 'styled-components';
 import { useFormik } from 'formik';
+import { Summary } from '../Summary';
 
 const steps: IForm[] = formSchema;
+const fields = steps.map((step: IForm)  => step.fields).flat();
 
 const FormButton = styled(Button)`
   background-color: blue;
@@ -78,11 +80,7 @@ export default function HorizontalLinearStepper() {
       </Stepper>
       {activeStep === steps.length-1 ? (
         <React.Fragment>
-          {/* Add summary component */}
-          <h1>{formData.firstName}</h1>
-          <h1>{formData.lastName}</h1>
-          <h1>{formData.email}</h1>
-          <h1>{formData.phoneNumber}</h1>
+          <Summary formFields={fields} formValues={formData}></Summary>
           <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
             <Box sx={{ flex: '1 1 auto' }} />
             <FormButton onClick={handleSubmit}>Submit</FormButton>

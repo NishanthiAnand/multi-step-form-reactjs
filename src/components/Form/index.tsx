@@ -6,13 +6,13 @@ const FormElementWrapper =styled.div`
   margin-bottom: 40px;
 `;
 
-interface IFormFieldProps {
+interface IFormProps {
   fields:IFormFields[];
   handleFormData: (input: any) => void;
   values: IFormModal;
 }
 
-export const Form = ({fields, handleFormData, values}: IFormFieldProps) => {
+export const Form = ({fields, handleFormData, values}: IFormProps) => {
   return (
     <>
       {fields && fields.map((field, index: number) => {

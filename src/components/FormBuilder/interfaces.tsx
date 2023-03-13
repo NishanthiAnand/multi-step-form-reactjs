@@ -1,14 +1,14 @@
 export interface IForm {
-  element?: string;
-  stepCount?: string;
-  stepName?: string;
+  element: string;
+  stepCount: string;
+  stepName: string;
   fields: IFormFields[];
 }
 
 export interface IFormFields {
   id: string;
   type: string;
-  props: { label?: string, name?: string};
+  props: { label: string, name: string};
 }
 
 export interface IFormFieldProps {
