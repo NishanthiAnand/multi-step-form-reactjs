@@ -15,13 +15,13 @@ interface IFormProps {
 export const Form = ({fields, handleFormData, values}: IFormProps) => {
   return (
     <>
-      {fields && fields.map((field, index: number) => {
-        return (
-          <FormElementWrapper>
-            <FormElement field={field} key={index} handleFormData={handleFormData} values={values}></FormElement>
-          </FormElementWrapper>
-        )
-      })}
+      <FormElementWrapper>
+        {fields && fields.map((field, index: number) => {
+          return (
+              <FormElement field={field} key={index} handleFormData={handleFormData} values={values}></FormElement>
+          )
+        })}
+      </FormElementWrapper>
     </>
   )
 }

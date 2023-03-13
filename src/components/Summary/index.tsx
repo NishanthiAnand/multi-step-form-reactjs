@@ -14,9 +14,9 @@ export const Summary = ({formFields, formValues}: any) => {
   return (
     <>
       <SummaryWrapper>
-        {formFields.map((field: any) => {
+        {formFields.map((field: any, index: number) => {
           return (
-            <Paragraph><strong>{field.props.label} : </strong>{formValues[field.props.name]}</Paragraph>
+            <Paragraph key={index}><strong>{field.props.label} : </strong>{formValues[field.props.name]}</Paragraph>
           );
         })}
       </SummaryWrapper>
