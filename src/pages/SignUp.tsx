@@ -1,8 +1,10 @@
+import { FormBuilder } from '../components/FormBuilder';
+
 export const SignUp = () => {
   return (
     <>
       <div className="App">
-        <h1> Sign Up</h1>
+        <FormBuilder></FormBuilder>
       </div>
     </>
   )
