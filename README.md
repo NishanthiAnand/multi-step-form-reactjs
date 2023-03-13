@@ -1,6 +1,7 @@
 # multi-step-form-reactjs
 
-To run the application
-yarn
-npm run start
-Navigate to localhost:3000
+## To run the application
+
+1. `yarn`
+2. `yarn run start`
+3. Navigate to `localhost:3000`
